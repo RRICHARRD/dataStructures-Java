@@ -1,0 +1,41 @@
+- 04/09/2021-	
+
+	Lista-vinculada ou lista-ligada é um tipo abstrato de dados, também denominado como ADT, no qual organiza dados 
+de forma linear na memória, ou seja, as informações ligadas entre si não estão sequencialmente organizadas na  memória 
+do computador como os vetores. Apesar disso, também pode ser enquadrada com estrutura de dados a depender da utilização. 
+	A lista-vinculada funcionada através de uma amarração entre nós, onde um nó possui um campo que armazena uma
+informação e outro onde recebe o endereço de memória de outro nó, sendo assim, para ter acesso aos nós, é necessário
+ter acesso ao primeiro nó que é chamado de nó cabeça, ou nó chefe, através dele se faz uma iteração entre a lista até 
+que se encontro o nó nullo, ou seja, o útlimo nó da lista, é como se fosse caixas ligadas conectadas uma nas outras
+por um intermédio de uma corrente.
+	A respeito da manipulação das listas ligadas, existem 4 métodos básicos, inserir informações no início, "meio",
+fim e apagar um nó, tudo isso é realizado sobre a manipulação da conexão de um nó no outro, na qual, se troca sas cor-
+rentes das caixas, em linguagens como Java, quando um nó é desconectado de todos os outros nós, automaticamente é limpo
+da memória pelo garbage colector, no C é necessário limpar na mão. Abaixo será explicado a forma como essas operações bá-
+sicas funcionam na prática:
+
+	Inserir no início:
+		O novo nó aponta para o nó cabeça, o nó cabeça tem seu endereço de memória substituído para esse nó que
+		acabou de apontar para o nó cabeça, sendo a lista A -> b -> C, para inserir um nó T, T -> A -> B -> C, ai 
+		o nó T tem que virar o nó cabeça, como inicialmente ele está no A, o head do A começa apontar para o T. 
+	Inserir no fim:
+		Usa o nó cabeça para iterar a lista inteira até encontrar aquele nó que não tem amarração em nenhum outro, 
+		ou seja, o nó que aponta para nullo, ai pega e insere esse novo nó na última posição. Para fazer o processo
+		se uma variável temporária que vai recebendo o próximo nó até chegar no null, quando chega, insere esse no-
+		vo.
+	Inserir no meio:
+		O novo nó aponta para o próximo nó de um certo nó, por exemplo A -> B -> C, ai temos um nó novo chamado T, 
+		esse novo nó T vai apontar para B assim como A, então os nós A e T apontam para B, agora o nó A começa apon-
+		tar para o nó T, deixando a lista ligada da seguinte maneira A -> T -> B -> C. É assim que um nó é aplicado 
+		no "meio" de uma lista ligada, ele aponta para um que outro já está apontando e depois o que apontava primei-
+		ro que ele começa apontar para esse nó que começou apontar para o que ele já estava apontando, para facilitar
+		o entendimento, Sarah está olhando para Larissa, Julha começa olhar para Larissa também, ai Sarah começa olhar
+		para Julha, super simples.
+	Apagar um nó:
+		Julha está olhando para Larissa e Larissa está olhando para Bianca, Julha passa a olhar para a Bianca e Larissa
+		é apagada do universo pelo garbage colector, é o seguite, para um nó ser apagado, o nó que antece ele começa apon-	
+		tar para o nó que ele mesmo aponta, ele para de apontar para o que ele aponta e fica solto, sendo excluído pelo 
+		garbage colector logo em seguida. No caso de apagar o primeiro nó, é necessário substituir o cabeçalho da lista
+		para o próximo nó.
+
+	Todas essas funcionalidades estão aplicadas no código da pasta cd-code desse mesmo diretório.
