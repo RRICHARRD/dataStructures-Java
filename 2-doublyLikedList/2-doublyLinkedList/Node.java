@@ -1,0 +1,13 @@
+package main;
+
+public final class Node{
+	public int data;
+	public Node next;
+	public Node prev;
+
+	public Node(int data){
+		this.data = data;
+		next = null;
+		next = null;
+	}
+}
