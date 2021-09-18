@@ -16,7 +16,7 @@ public final class Main{
 
 		stack.peek();
 
-		System.out.println("--- POPING ELEMENTS FROM MY STACK ---");
+		System.out.println("--- POPING TWO ELEMENTS FROM MY STACK ---");
 		stack.pop();
 		stack.pop();
 		
